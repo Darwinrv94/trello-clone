@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faTrello } from '@fortawesome/free-brands-svg-icons';
-import { faBox, faWaveSquare, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faBox, faWaveSquare, faClock, faAngleUp, faAngleDown, faHeart, faBorderAll, faUsers, faGear } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,4 +12,47 @@ export class BoardsComponent {
   faBox = faBox;
   faWaveSquare = faWaveSquare;
   faClock = faClock;
+  faAngleUp = faAngleUp;
+  faAngleDown = faAngleDown;
+  faHeart = faHeart;
+  faBorderAll = faBorderAll;
+  faUsers = faUsers;
+  faGear = faGear;
+
+  items = [
+    {
+      label: 'Items 1',
+      items: [
+        {
+          label: 'Sub Item 1.1'
+        },
+        {
+          label: 'Sub Item 1.2'
+        }
+      ]
+    },
+    {
+      label: 'Items 2',
+      items: [
+        {
+          label: 'Sub Item 2.1'
+        }
+      ]
+    },
+
+    {
+      label: 'Items 3',
+      items: [
+        {
+          label: 'Sub Item 3.1'
+        },
+        {
+          label: 'Sub Item 3.2'
+        },
+        {
+          label: 'Sub Item 3.3'
+        }
+      ]
+    }
+  ];
 }

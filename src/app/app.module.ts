@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkAccordionModule } from '@angular/cdk/accordion'; 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DialogModule } from '@angular/cdk/dialog';  
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +12,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { BoardsComponent } from './pages/boards/boards.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BoardComponent } from './pages/board/board.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     ButtonComponent,
     BoardsComponent,
-    NavbarComponent
+    NavbarComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
     OverlayModule,
+    CdkAccordionModule,
+    DragDropModule,
+    DialogModule,
     AppRoutingModule,
     FontAwesomeModule
   ],

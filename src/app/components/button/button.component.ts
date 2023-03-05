@@ -18,7 +18,10 @@ export class ButtonComponent {
       'focus:bg-success-300': this.color === 'success',
       'bg-red-700': this.color === 'danger',
       'hover:bg-red-800': this.color === 'danger',
-      'focus:bg-red-300': this.color === 'danger'
+      'focus:bg-red-300': this.color === 'danger',
+      'bg-light-700': this.color === 'light',
+      'hover:bg-light-800': this.color === 'light',
+      'focus:bg-light-300': this.color === 'light',
     };
   }
 }
