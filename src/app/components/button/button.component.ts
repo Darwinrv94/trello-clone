@@ -8,20 +8,23 @@ export class ButtonComponent {
   @Input() typeBtn: 'button' | 'submit' | 'reset' = 'button';
   @Input() color: string = 'primary';
 
-  get colors(): object {
+  get colors() {
     return {
-      'bg-primary-700': this.color === 'primary',
-      'hover:bg-primary-800': this.color === 'primary',
-      'focus:bg-primary-300': this.color === 'primary',
+      'text-white': this.color === 'success' || this.color === 'primary' || this.color === 'red',
+      'text-gray-700': this.color === 'gray-light',
       'bg-success-700': this.color === 'success',
       'hover:bg-success-800': this.color === 'success',
-      'focus:bg-success-300': this.color === 'success',
-      'bg-red-700': this.color === 'danger',
-      'hover:bg-red-800': this.color === 'danger',
-      'focus:bg-red-300': this.color === 'danger',
-      'bg-light-700': this.color === 'light',
-      'hover:bg-light-800': this.color === 'light',
-      'focus:bg-light-300': this.color === 'light',
+      'focus:ring-success-300': this.color === 'success',
+      'bg-primary-700': this.color === 'primary',
+      'hover:bg-primary-800': this.color === 'primary',
+      'focus:ring-primary-300': this.color === 'primary',
+      'bg-red-700': this.color === 'red',
+      'hover:bg-red-800': this.color === 'red',
+      'focus:ring-red-300': this.color === 'red',
+      'bg-gray-200': this.color === 'gray-light',
+      'hover:bg-gray-500': this.color === 'gray-light',
+      'focus:ring-gray-50': this.color === 'gray-light',
     };
   }
+
 }
