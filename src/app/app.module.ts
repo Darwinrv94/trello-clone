@@ -3,7 +3,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkAccordionModule } from '@angular/cdk/accordion'; 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DialogModule } from '@angular/cdk/dialog';
-import { ScrollingModule } from '@angular/cdk/scrolling'; 
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkTableModule } from '@angular/cdk/table'; 
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BoardComponent } from './pages/board/board.component';
 import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
 import { ScrollComponent } from './pages/scroll/scroll.component';
+import { TableComponent } from './pages/table/table.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { ScrollComponent } from './pages/scroll/scroll.component';
     NavbarComponent,
     BoardComponent,
     TodoDialogComponent,
-    ScrollComponent
+    ScrollComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,11 @@ import { ScrollComponent } from './pages/scroll/scroll.component';
     DragDropModule,
     DialogModule,
     ScrollingModule,
+    CdkTableModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

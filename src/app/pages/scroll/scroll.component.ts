@@ -1,12 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
-interface Product {
-  id: string;
-  title: string;
-  price: number;
-  images: string[];
-}
+import { Product } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-scroll',
@@ -17,11 +11,11 @@ export class ScrollComponent implements OnInit {
   products: Product[] = [];
 
   constructor(
-    private httpClient: HttpClient
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    this.httpClient.get<Product[]>('https://api.escuelajs.co/api/v1/products')
+    this.http.get<Product[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe(data => {
         this.products = data;
       });
